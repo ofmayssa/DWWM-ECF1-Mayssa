@@ -1,6 +1,127 @@
-.navbar * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: ;
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*my colors*/
+$dark: #2e2a39; 
+$pink: #FD55B7;
+$blue: #83F2FF;
+$lightblue: #E8FFFF;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* BASE STYLES */
+body {
+  background-color: #e8f0f7;
+  min-height: 5000px;
+  padding-top: 70px;
+}
+
+/* NAV STYLES */
+.header {
+  background-color:$dark;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+
+
+.logo {
+  height: 200px;
+  display: block;
+}
+
+
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+
+
+.nav__link {
+  color:$pink;
+  font-size: 15px;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.nav__link::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: rgb(0, 183, 255);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: all 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.btn {
+  color: #fff;
+  background-color: #0071e3;
+  padding: 7px 18px;
+  border-radius: 1000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: rgb(28, 128, 228);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 650px) {
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    row-gap: 18px;
+  }
+
+  .nav__list {
+    column-gap: 20px;
+  }
+}
+/* END OF THE NAV STYLES */
+
+
