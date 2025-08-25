@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Variables */
 $dark: #2e2a39; 
@@ -25,10 +26,20 @@ ul {
 /* BASE STYLES */
 body {
   background-color: #e8f0f7;
-   min-height: 5000px;
+  min-height: 5000px;
   padding-top: 70px;
 
 }
+
+h1{
+    font-family: 'Exo 2', sans-serif;
+    color: $dark;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    color: $dark;
+}
+
 
 /* NAVBAR */
 .header {
@@ -61,9 +72,10 @@ body {
     .nav__list {
       display: flex;
       column-gap: 40px;
-      font-family: 'Exo 2', sans-serif;
+      font-family: 'Roboto', sans-serif;
 
       .nav__link {
+        font-family: 'Roboto', sans-serif;
         color: $pink;
         font-size: 15px;
         transition: all 0.4s;
@@ -94,7 +106,8 @@ body {
     }
 
     .btn {
-      color: #fff;
+      
+      color: $dark;
       background-color: $blue;
       padding: 7px 18px;
       border-radius: 1000px;
@@ -124,86 +137,75 @@ body {
   }
 }
 
-/* MAIN STYLES */
-.banner {
-  width: 100%;
-  height: 450px;
-  background-image: url("/img/theater-banner.webp");
-  background-size: cover;     /* remplit la div */
-  background-position: center; /* centrée */
- 
-  @media (max-width: 650px) {
-         height: 40vh; 
-      
-  } 
 
+* {
+  box-sizing: border-box;
 }
 
-.titles {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  display: flex;
-  flex-direction: column;
-  gap: 10vh; 
-  justify-content: center;
-  align-items: center;
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding: 12px;
+  border: 1px solid $dark;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  
+}
 
-  width: 100vw;          // prend toute la largeur de l’écran
-  background-position: center;
-  background-color: #83F2FF;
+input[type=submit] {
+  font-family: 'Roboto', sans-serif;
+  background-color:$dark;
+  color: $blue;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
 
+input[type=submit]:hover {
+  background-color: $pink;
+}
 
+/* Style the container/contact section */
+.container {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 200px;
+}
 
-   @media (max-width: 650px) {
-      padding-top:3vh;/* taille réduite pour petits écrans */
-      font-size: 80%;
-  } 
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
 
-  &_one {
-    font-family: 'Exo 2', sans-serif;
-    font-size:200%;
-    color:$dark;
-    
-  } 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  &_two { 
-    font-family: 'Roboto', sans-serif;
-    color: $pink;
-    font-size: 200%; 
-       
-        }
-    } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
 
 
 
 
-
-    /*footer*/
+ 
+ /*footer*/
     .footer {
+  font-family: 'Roboto', sans-serif;
   position: fixed;
   left: 0;
   bottom: 0;
