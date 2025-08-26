@@ -25,9 +25,8 @@ ul {
 /* BASE STYLES */
 body {
   background-color: #e8f0f7;
-   min-height: 5000px;
-  padding-top: 70px;
-
+  min-height: 5000px;
+  padding-top: 12vh;
 }
 
 /* NAVBAR */
@@ -36,13 +35,12 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  height: 18vh;
-  
+  height: 15vh;
+
   @media (max-width: 650px) {
     height: 30vh;
-  
+    padding: 10px 0;
   }
-  
 
   &__content {
     display: flex;
@@ -50,18 +48,41 @@ body {
     justify-content: space-between;
     min-height: 60px;
     max-width: 1200px;
-    padding: 0 30px;
+    padding:  30px;
     margin: 0 auto;
+    font-family: 'Exo 2', sans-serif;
+
+
+    @media (max-width: 650px) {
+      flex-direction: column;   /* ✅ passe en colonne */
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      row-gap: 10px;            /* espace entre logo et menu */
+    }
+  
 
     .logo {
-      height: 200px;
-      display: block;
+      height: 20vh;       
+      max-height: 100px; 
+      width: 110px;   
+
+      @media (max-width: 650px) {
+        max-width: 80px;       /* ✅ logo réduit */
+        height: auto;
+      }
     }
 
     .nav__list {
       display: flex;
       column-gap: 40px;
       font-family: 'Exo 2', sans-serif;
+
+      @media (max-width: 650px) {
+        flex-direction: column; /* ✅ menu en colonne */
+        row-gap: 10px;
+        align-items: center;    /* centré */
+      }
 
       .nav__link {
         color: $pink;
@@ -94,7 +115,7 @@ body {
     }
 
     .btn {
-      color: #fff;
+      color: $dark;
       background-color: $blue;
       padding: 7px 18px;
       border-radius: 1000px;
@@ -102,23 +123,10 @@ body {
       font-size: 12px;
       font-weight: 500;
       transition: all 0.2s;
+      
 
       &:hover {
         background-color: darken($blue, 10%);
-      }
-    }
-  }
-
-  /* MEDIA QUERIES */
-  @media (max-width: 650px) {
-    &__content {
-      flex-direction: column;
-      align-items: center;
-      padding: 25px 0;
-      row-gap: 18px;
-
-      .nav__list {
-        column-gap: 20px;
       }
     }
   }
@@ -127,89 +135,81 @@ body {
 /* MAIN STYLES */
 .banner {
   width: 100%;
-  height: 450px;
+  height: 300px;
   background-image: url("/img/theater-banner.webp");
-  background-size: cover;     /* remplit la div */
-  background-position: center; /* centrée */
+  background-size: cover;
+  background-position: center;
  
   @media (max-width: 650px) {
-         height: 40vh; 
-      
+    height: 40vh; 
   } 
-
 }
 
 .titles {
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-bottom: 10vh;
   display: flex;
   flex-direction: column;
   gap: 10vh; 
   justify-content: center;
   align-items: center;
-
-  width: 100vw;          // prend toute la largeur de l’écran
+  width: 100vw;
   background-position: center;
-  background-color: #83F2FF;
+  background-color: $blue;
 
 
-
-   @media (max-width: 650px) {
-      padding-top:3vh;/* taille réduite pour petits écrans */
-      font-size: 80%;
+  @media (max-width: 650px) {
+    padding-top: 3vh;
+    font-size: 80%;
+    gap: 5vh;
   } 
 
   &_one {
-    font-family: 'Exo 2', sans-serif;
-    font-size:200%;
-    color:$dark;
-    
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: $dark;
+
+    @media (max-width: 650px) {
+      font-size: 150%;
+    }
   } 
 
   &_two { 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     color: $pink;
     font-size: 200%; 
-       
-        }
-    } 
 
+    @media (max-width: 650px) {
+      font-size: 120%;
+    }
+  } 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*footer*/
-    .footer {
+/* FOOTER */
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 10%;
+  height: auto;
+  padding: 20px 10px;
   background-color: $dark;
   color: $pink;
+  font-family: 'Exo 2', sans-serif;
   text-align: center;
+
+  @media (max-width: 650px) {
+    font-size: 90%;
+  }
+&_icon{
+padding-bottom: 2vh;
+
+}
+
+
+&_info-icon{
+ height: 4vh;
+ font-family: 'Exo 2', sans-serif;
+
+}
 }
