@@ -25,9 +25,11 @@ ul {
 
 /* BASE STYLES */
 body {
-  background-color: #e8f0f7;
-  min-height: 5000px;
+  background-color: #051726;
+  min-height: 400px;
   padding-top: 12vh;
+  scroll-behavior: smooth;
+
 }
 
 /* NAVBAR */
@@ -37,6 +39,8 @@ body {
   width: 100%;
   top: 0;
   height: 15vh;
+  font-family: 'Exo 2', sans-serif;
+
 
   @media (max-width: 650px) {
     height: 30vh;
@@ -85,7 +89,7 @@ body {
         align-items: center;    /* centré */
       }
 
-      .nav__link {
+      &-link {
         color: $pink;
         font-size: 15px;
         transition: all 0.4s;
@@ -133,11 +137,14 @@ body {
   }
 }
 
-.titles{
+.container{
+  background-color: #E8FFFF !important;
+
+&-titles{
   padding-bottom: 4vh;
   display: flex;
   flex-direction: column;
-  gap: 2vh; 
+  gap: 1vh; 
   justify-content: center;
   align-items: center;
   background-position: center;
@@ -155,7 +162,7 @@ body {
   }
 
 }
-
+}
 
 * {
   box-sizing: border-box;
@@ -195,7 +202,7 @@ input[type=submit]:hover {
 }
 
 /* Create two columns that float next to eachother */
-.column {
+.row-column {
   float: left;
   width: 50%;
   margin-top: 6px;

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Variables */
 $dark: #2e2a39; 
@@ -24,8 +25,8 @@ ul {
 
 /* BASE STYLES */
 body {
-  background-color: #e8f0f7;
-  min-height: 700px;
+  background-color: $lightblue;
+  min-height: 400px;
   padding-top: 12vh;
   scroll-behavior: smooth;
 
@@ -128,63 +129,32 @@ body {
       
 
       &:hover {
-        background-color: darken($blue, 10%);
+        background-color: darken($blue, 40%);
       }
     }
   }
 }
 
-/* MAIN STYLES */
-.banner {
-  width: 100%;
-  height: 300px;
-  background-image: url("/img/theater-banner.webp");
-  background-size: cover;
-  background-position: center;
- 
-  @media (max-width: 650px) {
-    height: 40vh; 
-  } 
+
+
+
+.posters{
+ display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    max-width: 1200px;
+    padding:  30px;
+    margin: 0 auto;
+&-bis{
+
 }
 
-.titles {
-  padding-top: 5vh;
-  padding-bottom: 12vh;
-  display: flex;
-  flex-direction: column;
-  gap: 10vh; 
-  align-items: center;
-  width: 100vw;
-  background-position: center;
-  background-color: $blue;
-
-
-  @media (max-width: 650px) {
-    padding-top: 3vh;
-    font-size: 80%;
-    gap: 5vh;
-  } 
-
-  &_one {
-    font-family: 'Roboto', sans-serif;
-    font-size: 200%;
-    color: $dark;
-
-    @media (max-width: 650px) {
-      font-size: 150%;
-    }
-  } 
-
-  &_two { 
-    font-family: 'Exo 2', sans-serif;
-    color: $pink;
-    font-size: 200%; 
-
-    @media (max-width: 650px) {
-      font-size: 120%;
-    }
-  } 
 }
+
+
+
+
 
 /* FOOTER */
 .footer {
@@ -204,13 +174,6 @@ body {
   }
 &_icon{
 padding-bottom: 2vh;
-
-}
-
-
-&_info-icon{
- height: 4vh;
- font-family: 'Exo 2', sans-serif;
 
 }
 }
