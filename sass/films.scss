@@ -54,6 +54,7 @@ body {
     padding:  30px;
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
+    color: $pink;
 
 
     @media (max-width: 650px) {
@@ -138,20 +139,24 @@ body {
 
 
 
-.posters{
- display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 60px;
-    max-width: 1200px;
-    padding:  30px;
-    margin: 0 auto;
-&-bis{
+.gallery {
 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+
+  &_item {
+    padding-top: 10%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-}
-
 
 
 
@@ -163,7 +168,8 @@ body {
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: 20px 10px;
+  padding: 3px;
+  padding-bottom: 6px;
   background-color: $dark;
   color: $pink;
   font-family: 'Exo 2', sans-serif;
@@ -173,7 +179,7 @@ body {
     font-size: 90%;
   }
 &_icon{
-padding-bottom: 2vh;
+padding-bottom: 2vh, 1vh;
 
 }
 }

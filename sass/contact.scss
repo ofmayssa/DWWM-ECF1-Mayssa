@@ -217,6 +217,7 @@ input[type=submit]:hover {
   width: 50%;
   margin-top: 6px;
   padding: 20px;
+
 }
 
 /* Clear floats after the columns */
@@ -251,7 +252,8 @@ input[type=submit]:hover {
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: 20px 10px;
+  padding: 3px;
+  padding-bottom: 6px;
   background-color: $dark;
   color: $pink;
   font-family: 'Exo 2', sans-serif;
@@ -261,7 +263,7 @@ input[type=submit]:hover {
     font-size: 90%;
   }
 &_icon{
-padding-bottom: 2vh;
+padding-bottom: 2vh, 1vh;
 
 }
 }
