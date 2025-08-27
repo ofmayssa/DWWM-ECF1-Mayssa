@@ -53,7 +53,7 @@ body {
     justify-content: space-between;
     min-height: 60px;
     max-width: 1200px;
-    padding:  30px;
+    padding:  20px;
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
 
@@ -216,7 +216,7 @@ input[type=submit]:hover {
   float: left;
   width: 50%;
   margin-top: 6px;
-  padding: 20px;
+  padding: 75px;
 
 }
 
@@ -260,7 +260,8 @@ input[type=submit]:hover {
   text-align: center;
 
   @media (max-width: 650px) {
-    font-size: 90%;
+    
+    font-size: 60%;
   }
 &_icon{
 padding-bottom: 2vh, 1vh;

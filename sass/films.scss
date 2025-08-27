@@ -43,6 +43,8 @@ body {
   @media (max-width: 650px) {
     height: 30vh;
     padding: 10px 0;
+   
+  }
   }
 
   &__content {
@@ -51,7 +53,7 @@ body {
     justify-content: space-between;
     min-height: 60px;
     max-width: 1200px;
-    padding:  30px;
+     padding:  20px;
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
     color: $pink;
@@ -134,7 +136,7 @@ body {
       }
     }
   }
-}
+
 
 
 
@@ -144,24 +146,24 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
+  
 
   &_item {
-    padding-top: 10%;
+    padding-top:10vh;
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 0.5rem;
+   
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     grid-template-columns: repeat(2, 1fr);
-  }
+        padding-top: 12vh;
+        
+
 }
-
+}
 /*card*/
-
-
-
 .films-section {
     width: 100%;
     display: flex;
@@ -169,9 +171,7 @@ body {
     align-items: center;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Exo 2', sans-serif;
-    padding-bottom: 30vh;
-
+    padding-bottom: 20vh;
 }
 
 .films {
@@ -185,7 +185,7 @@ body {
     padding: 0 1rem;
 }
 
-.film-card {
+.films_card {
 
     border-radius: 10px;
     padding: 1rem;
@@ -195,13 +195,16 @@ body {
     box-shadow: 0 4px 10px #2E2a39;
 }
 
-.film-card img {
+.films_card img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 0.5rem;
     border-radius: 6px;
 }
+
+
+
 /*card*/
 
 
@@ -220,7 +223,7 @@ body {
   text-align: center;
 
   @media (max-width: 650px) {
-    font-size: 90%;
+    font-size: 60%;
   }
 &_icon{
 padding-bottom: 2vh, 1vh;

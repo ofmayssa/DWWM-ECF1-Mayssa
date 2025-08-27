@@ -50,7 +50,7 @@ body {
     justify-content: space-between;
     min-height: 60px;
     max-width: 1200px;
-    padding:  30px;
+    padding:  20px;
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
     color: $pink;
@@ -144,7 +144,7 @@ body {
   background-position: center;
  
   @media (max-width: 650px) {
-    height: 40vh; 
+    height: 30vh; 
   } 
 }
 
@@ -161,7 +161,7 @@ body {
 
 
   @media (max-width: 650px) {
-    padding-top: 3vh;
+    padding-top: 11vh;
     font-size: 80%;
     gap: 5vh;
   } 
@@ -236,6 +236,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100px;
+  
+  
 }
 .equalizer,
 .equalizer1 {
@@ -244,15 +246,19 @@ body {
   justify-content: center;
   gap: 2px;
   align-items: flex-end;
+  
+  
 }
 
 .equalizer1 {
   transform: rotate(180deg);
   background-color: #83F2FF;
+  
 }
 
 .bar {
   background-color: $lightblue;
+  
 }
 
 .bar1 {
@@ -265,6 +271,7 @@ body {
   height: 20px;
   transform-origin: bottom;
   animation: bounce 1s infinite ease-in-out;
+  
 }
 
 .bar:nth-child(2),
@@ -349,7 +356,8 @@ body {
   text-align: center;
 
   @media (max-width: 650px) {
-    font-size: 90%;
+    
+    font-size: 60%;
   }
 &_icon{
 padding-bottom: 2vh, 1vh;
