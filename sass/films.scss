@@ -60,11 +60,11 @@ body {
 
 
     @media (max-width: 650px) {
-      flex-direction: column;   /* ✅ passe en colonne */
+      flex-direction: column; 
       justify-content: center;
       align-items: center;
       padding: 15px;
-      row-gap: 10px;            /* espace entre logo et menu */
+      row-gap: 10px;            
     }
   
 
@@ -74,7 +74,7 @@ body {
       width: 110px;   
 
       @media (max-width: 650px) {
-        max-width: 80px;       /* ✅ logo réduit */
+        max-width: 80px;       
         height: auto;
       }
     }
@@ -85,9 +85,9 @@ body {
       font-family: 'Exo 2', sans-serif;
 
       @media (max-width: 650px) {
-        flex-direction: column; /* ✅ menu en colonne */
+        flex-direction: column; 
         row-gap: 10px;
-        align-items: center;    /* centré */
+        align-items: center;   
       }
 
       .nav__link {
