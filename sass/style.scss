@@ -129,7 +129,7 @@ body {
       
 
       &:hover {
-        background-color: darken($blue, 10%);
+        background-color: darken($blue, 20%);
       }
     }
   }
@@ -187,14 +187,15 @@ body {
   } 
 }
 /*equalizer*/
-.equalizer {
+#equalizer {
   display: flex;
   gap: 15px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 180px; 
+  height: 150px; 
   background-color: $blue;
+  
 
   &_bar {
     position: relative; // nécessaire pour les pseudo-éléments
@@ -232,15 +233,8 @@ body {
 
 
 /*equalizer*/
-.equalizer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  
-  
-}
-.equalizer,
-.equalizer1 {
+#equalizer,
+#equalizer1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,10 +244,25 @@ body {
   
 }
 
-.equalizer1 {
+#equalizer1 {
   transform: rotate(180deg);
-  background-color: #83F2FF;
+  background-color:$blue;
   
+}
+
+.player-control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+}
+
+#js-play-btn{
+  font-size: 5vh;
+  border-radius: 10%;
+  color: $pink;
+  background-color: $lightblue;
+  padding: 1vh;
 }
 
 .bar {

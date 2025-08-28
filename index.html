@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" type="image/png" href="img/favicon.ico">
+    <script type="module" src="js/equalizer.js"></script>
+
     <title>CINEMA NEON DYNASTY</title>
     
 </head>
@@ -43,8 +45,15 @@
     </div>
 
 <!--equalizer-->
-<div class="equalizer-container">
-<div class="equalizer">
+<div class="player-control"> 
+  <button id="js-play-btn"> Musique</button>
+
+<audio src="img/Loop.mp3" id="js-audio"></audio>
+</div>
+
+
+<div>
+<div id="equalizer">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -72,7 +81,7 @@
           <div class="bar"></div>
         </div>
 
-        <div class="equalizer1">
+        <div id="equalizer1">
           <div class="bar1"></div>
           <div class="bar1"></div>
           <div class="bar1"></div>
@@ -98,7 +107,9 @@
           <div class="bar1"></div>
           <div class="bar1"></div>
           <div class="bar1"></div>
+          
         </div> 
+
       </div>
 <!--equalizer-->
 
@@ -136,9 +147,9 @@
 </div>
 
         
-        <p> Horaires :
+        <p> Horaires : </p>
 <p>Lundi – Samedi : 10h00 – 00h00</p>
-</p>
+    
 
 
 </div>
