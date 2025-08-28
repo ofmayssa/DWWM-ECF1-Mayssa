@@ -57,11 +57,11 @@ body {
 
 
     @media (max-width: 650px) {
-      flex-direction: column;   /* ✅ passe en colonne */
+      flex-direction: column;   
       justify-content: center;
       align-items: center;
       padding: 15px;
-      row-gap: 10px;            /* espace entre logo et menu */
+      row-gap: 10px;            
     }
   
 
@@ -71,7 +71,7 @@ body {
       width: 110px;   
 
       @media (max-width: 650px) {
-        max-width: 80px;       /* ✅ logo réduit */
+        max-width: 80px;       
         height: auto;
       }
     }
@@ -82,9 +82,9 @@ body {
       font-family: 'Exo 2', sans-serif;
 
       @media (max-width: 650px) {
-        flex-direction: column; /* ✅ menu en colonne */
+        flex-direction: column; 
         row-gap: 10px;
-        align-items: center;    /* centré */
+        align-items: center;    
       }
 
       .nav__link {
@@ -198,7 +198,7 @@ body {
   
 
   &_bar {
-    position: relative; // nécessaire pour les pseudo-éléments
+    position: relative; 
     width: 15px;
     height: 10vh; 
     transform-origin: center;
@@ -209,18 +209,18 @@ body {
       content: '';
       position: absolute;
       width: 100%;
-      height: 50%; // moitié de la barre
+      height: 50%; 
     }
 
     &::before {
       top: 0;
-      background-color: $pink; // couleur du haut
+      background-color: $pink; 
       border-radius: 3px 3px 0 0;
     }
 
     &::after {
       bottom: 0;
-      background-color: $pink; // couleur du bas
+      background-color: $pink; 
       border-radius: 0 0 3px 3px;
     }
   }
