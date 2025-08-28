@@ -1,7 +1,13 @@
 READ ME
-cinema Neon Dynasty - Website
-Cinema Neon Dynasty is a website dedicated to cinema with a focus on films featuring special effects (SFX). The site includes a homepage, a contact page, and a page listing the movies currently showing along with ticket availability. Users can navigate easily between pages using clickable links, explore films at the cinema, and check or reserve tickets.
-To collaborate on this project using Git, first clone the repository by running git clone <REPOSITORY_URL> in your terminal, replacing <REPOSITORY_URL> with the actual GitHub link. Once cloned, navigate into the project folder with cd folder-name and open the index.html file in your browser to view the site locally.
-When making changes, it is recommended to create a new branch using git checkout -b branch-name and then work on your updates. After finishing your edits, stage the changes with git add . and commit them using git commit -m "Description of your changes". You can then push your branch to GitHub with git push origin branch-name and open a Pull Request to propose merging your updates into the main branch.
-Contributors should follow the existing file structure and naming conventions, test their changes locally before pushing, and use clear, descriptive commit messages.
-
+Cinema Neon Dynasty - Website
+Cinema Neon Dynasty is a website dedicated to cinema, focusing on films with special effects (SFX). The site includes a homepage presenting the cinema, a films page listing currently showing movies with ticket availability, and a contact page. Users can easily navigate between pages, explore the cinema’s films, and check or reserve tickets.
+Installation and Local Use
+To run the project locally, first clone the repository by running git clone <REPOSITORY_URL> (replace <REPOSITORY_URL> with the actual GitHub link). Navigate into the project folder with cd cinema-neon-dynasty. Open index.html in your browser to view the site. Optionally, you can use a local server like VSCode Live Server, WAMP, or MAMP.
+Deployment Instructions
+Ensure all files are prepared, including compiled HTML, CSS, JS, and images. Check that all relative paths are correct. Use the client’s hosting via FTP (e.g., FileZilla) or deploy via Git if the host supports it. For GitHub Pages, push the code to GitHub, go to Settings > Pages, select the main branch and root folder, and the site will be live at https://your-username.github.io/cinema-neon-dynasty. After deployment, test the site on multiple browsers such as Chrome, Safari, and Firefox, and check responsiveness on PC and mobile.
+Development Workflow with Git
+Create a new branch with git checkout -b feature-name. Make your changes, stage them with git add ., and commit using git commit -m "Description of the change". Push the branch with git push origin feature-name and open a Pull Request on GitHub to merge updates into the main branch. Contributors should follow the existing project structure, test changes locally, and write clear commit messages.
+Project Structure
+The project structure includes index.html, contact.html, movies.html, the /css/ folder for styles, the /scss/ folder for source SCSS, the /js/ folder for JavaScript, the /img/ folder for images, and the README.md file.
+Screenshots and Documentation
+Insert screenshots of the homepage, films page, and mobile view. Include Figma mockups, navigation and site structure diagrams, and screenshots of tests conducted on Safari, Chrome, PC, and mobile. Include relevant code excerpts such as SASS mixins or JavaScript features.
