@@ -1,5 +1,4 @@
-
- @import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Variables */
 $dark: #2e2a39; 
@@ -25,11 +24,10 @@ ul {
 
 /* BASE STYLES */
 body {
-  background-color: $lightblue;
+  background-color: #83f3ff8e;
   min-height: 400px;
   padding-top: 12vh;
   scroll-behavior: smooth;
-
 }
 
 /* NAVBAR */
@@ -38,13 +36,12 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  height: 15vh;
+  height: 15vh; 
+  z-index: 1000; 
 
   @media (max-width: 650px) {
     height: 30vh;
     padding: 10px 0;
-   
-  }
   }
 
   &__content {
@@ -53,197 +50,368 @@ body {
     justify-content: space-between;
     min-height: 60px;
     max-width: 1200px;
-     padding:  20px;
+    padding: 20px;
     margin: 0 auto;
     font-family: 'Exo 2', sans-serif;
     color: $pink;
 
-
     @media (max-width: 650px) {
+<<<<<<< HEAD
       flex-direction: column; 
       justify-content: center;
       align-items: center;
       padding: 15px;
       row-gap: 10px;            
+=======
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      row-gap: 10px;
+>>>>>>> fa39889 (jeudi)
     }
-  
+  }
 
-    .logo {
-      height: 20vh;       
-      max-height: 100px; 
-      width: 110px;   
+  .logo {
+    height: 20vh;       
+    max-height: 100px; 
+    width: 110px;   
 
+<<<<<<< HEAD
       @media (max-width: 650px) {
         max-width: 80px;       
         height: auto;
       }
+=======
+    @media (max-width: 650px) {
+      max-width: 80px;
+      height: auto;
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    column-gap: 40px;
+    font-family: 'Exo 2', sans-serif;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: center;
+>>>>>>> fa39889 (jeudi)
     }
 
-    .nav__list {
-      display: flex;
-      column-gap: 40px;
-      font-family: 'Exo 2', sans-serif;
+    .nav__link {
+      color: $pink;
+      font-size: 15px;
+      transition: all 0.4s;
+      position: relative;
 
+<<<<<<< HEAD
       @media (max-width: 650px) {
         flex-direction: column; 
         row-gap: 10px;
         align-items: center;   
+=======
+      &:hover,
+      &:focus {
+        color: $blue;
+>>>>>>> fa39889 (jeudi)
       }
 
-      .nav__link {
-        color: $pink;
-        font-size: 15px;
-        transition: all 0.4s;
-        position: relative;
-
-        &:hover,
-        &:focus {
-          color: $blue;
-        }
-
-        &::after {
-          content: '';
-          height: 2px;
-          width: 100%;
-          background-color: $blue;
-          position: absolute;
-          left: 0;
-          bottom: -8px;
-          transition: all 0.2s;
-          opacity: 0;
-          pointer-events: none;
-        }
-
-        &:hover::after {
-          opacity: 1;
-        }
+      &::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: $blue;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: all 0.2s;
+        opacity: 0;
+        pointer-events: none;
       }
-    }
 
-    .btn {
-      color: $dark;
-      background-color: $blue;
-      padding: 7px 18px;
-      border-radius: 1000px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 500;
-      transition: all 0.2s;
-      
-
-      &:hover {
-        background-color: darken($blue, 40%);
+      &:hover::after {
+        opacity: 1;
       }
     }
   }
 
+  .btn {
+    color: $dark;
+    background-color: $blue;
+    padding: 7px 18px;
+    border-radius: 1000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s;
 
+    &:hover {
+      background-color: darken($blue, 40%);
+    }
+  }
+}
 
-
-
+/* GALLERY */
 .gallery {
-
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  
 
   &_item {
-    padding-top:10vh;
+    padding-top: 10vh;
     width: 100%;
     height: auto;
     object-fit: cover;
-   
   }
 
   @media (max-width: 650px) {
     grid-template-columns: repeat(2, 1fr);
-        padding-top: 12vh;
-        
-
-}
+    padding-top: 12vh;
+  }
 }
 
-.films-section {
-    width: 100%;
+/* CINÉPASS */
+.cinepass {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: "Roboto" ;
+  
+
+   &_section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; 
+  }
+  &_title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    color: $dark;
+    padding-bottom: 3rem;
+
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 3rem;
+
+    &_btn {
+      background: #2e2a39e6;
+      color: $pink;
+      font-size: medium;
+      border: 0;
+      border-radius: 20px;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 14px $dark;
+      
+
+      &:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.05);
+      }
+    }
+  }
+
+ 
+}
+
+/* CARD */
+.card {
+  background: #2e2a39e6;
+  border-radius: 80px;
+  padding: 1.25rem;
+  margin: 5rem ;
+  max-width: 420px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px $dark;
+  text-align: center;
+
+  &_title {
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+    color: $pink;
+    text-transform: uppercase;
+  }
+
+  &-list {
+    padding: 0;
+    margin: 0.75rem 0 1rem;
+  }
+
+  &_item {
+    margin: 0.4rem 0;
+    color:#fd55b7bc;
+    font-size: 0.9rem;
+  }
+
+  &_price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0.6rem 0 1rem;
+    color: $blue;
+  }
+
+  &_btn {
+    background: $pink;
+    color: $dark;
+    font-size: medium;
+    border: 0;
+    border-radius: 20px;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 14px $dark;
+
+    &:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+  }
+}
+
+
+/*tickets*/
+.filtre {
+  background: #2e2a39e6;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  max-width: 600px; // largeur max
+  width: 90%;       // responsive
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $blue;
+  }
+
+  .filters-buttons {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 20vh;
-}
 
-.films {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
+    button {
+      @extend .card_btn; // réutilise le style existant des boutons
+      min-width: 250px;
+    }
+  }
 
-.films_card {
-
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    max-width: 220px;
-    width: 100%;
-    box-shadow: 0 4px 10px #2E2a39;
-}
-
-.films_card img {
-    width: 100%;
-    height: auto;
+  button {
     display: block;
-    margin: 0 auto 0.5rem;
-    border-radius: 6px;
+    width: 100%;
+    margin: 0.6rem auto;
+    padding: 0.9rem 1.2rem;
+    background: $dark;
+    color: $pink;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+
+    &:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+    }
+  }
+
+  @media (min-width: 650px) {
+    .filters-buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    button {
+      max-width: 300px;
+    }
+  }
 }
 
 
-
-/*cards*/
-.filtres {
-	border-radius: 4px;
-	box-shadow: 0px 0px 4px gray;
-	margin: 8px;
-	padding: 8px;
-	min-width: 300px;
-	min-height: 400px;
-}
-
-
+/* FICHES */
 .fiches {
-	flex: 1;
-	margin: 8px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 4px;
-}
-.fiches article {
-	border: 1px solid black;
-	padding: 4px;
-}
-.fiches article img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 200px;
-}
-.fiches article p {
-	margin-top: 4px;
-	margin-bottom: 4px;
-}
-.fiches article h2 {
-	text-align: center;
-}
-/*cards*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  padding-bottom: 15vh;
 
+  h2 {
+    grid-column: 1 / -1; // titre prend toute la largeur
+    text-align: center;
+    margin-bottom: 1rem;
+    color: $dark;
+    font-family: 'Exo 2', sans-serif;
+  }
 
+  article.card {
+    margin: 0;
+    padding: 1.5rem;
+    max-width: 100%;
+    background: $dark;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 
+    img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+      color: $pink;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: $blue;
+    }
+
+    .fiches article progress  {
+      width: 100%;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      appearance: none;
+      margin: 0.5rem 0;
+
+      &::-webkit-progress-bar {
+        background-color: $blue;
+        border-radius: 10px;
+      }
+
+      &::-webkit-progress-value {
+        background-color: $pink;
+        border-radius: 10px;
+      }
+
+      &::-moz-progress-bar {
+        background-color: $blue;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/*car*/
 /* FOOTER */
 .footer {
   position: fixed;
@@ -251,8 +419,7 @@ body {
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: 3px;
-  padding-bottom: 6px;
+  padding: 3px 0 6px;
   background-color: $dark;
   color: $pink;
   font-family: 'Exo 2', sans-serif;
@@ -261,8 +428,12 @@ body {
   @media (max-width: 650px) {
     font-size: 60%;
   }
-&_icon{
-padding-bottom: 2vh, 1vh;
 
+  &_icon {
+    padding-bottom: 2vh, 1vh;
+  }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> fa39889 (jeudi)

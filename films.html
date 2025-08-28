@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/films.min.css">
    <link rel="icon" type="image/png" href="img/favicon.ico">
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/card.js"></script>
+        <script type="module" src="js/script.js"></script>
+
     <title>films</title>
 </head>
 
@@ -48,12 +50,72 @@
   <img class="gallery_item" src="img/GhostInTheShell.webp"aria-label="poster du film Gohst in the shell qui montre une dame armé avec des lunettes" alt="poster du film ghost in the shell">
 </div>
 
+
 </main>
 
 <!--cards-->
 
+<div class="cinepass"> 
+
+  <h1 class="cinepass_title">CinéPass</h1>
+  
+  <main class="filters">
+  <button class="filters_btn" data-filter="all">Tous</button>
+  <button class="filters_btn" data-filter="basic">CinéPass -18</button>
+  <button class="filters_btn" data-filter="plus">CinéPass +18</button>
+  <button class="filters_btn" data-filter="gold">CinéPass Gold</button>
+</main>
+   
+  <section class="cinepass_section">
+    <!-- 1rst -->
+    <article class="card" data-category="basic">
+      <h3 class="card_title">CINÉPASS -18</h3>
+      <ul class="card_title-list">
+       <li class="card_item">🎟️ Séances illimitées</li>
+  <li class="card_item">⭐ Accès aux films en avant-première</li>
+  <li class="card_item">🍿 Réductions sur les snacks</li>
+  <li class="card_item">🎧 Expérience 3D & Dolby incluse</li>
+  <li class="card_item">❌ Aucun engagement</li>
+      </ul>
+      <p class="card_price">19,40€</p>
+      <button class="card_btn">Choisir ce CinéPass</button>
+    </article>
+
+    <!-- 2nd -->
+
+    <article class="card" data-category="plus">
+      <h3 class="card_title">CINÉPASS +18</h3>
+      <ul class="card_title-list">
+        <li class="card_item">🎟️ Séances illimitées</li>
+  <li class="card_item">⭐ Accès aux films en avant-première</li>
+  <li class="card_item">🍿 Réductions sur les snacks</li>
+  <li class="card_item">🎧 Expérience 3D & Dolby incluse</li>
+  <li class="card_item">❌ Aucun engagement</li>
+      </ul>
+      <p class="card_price">20,40€</p>
+      <button class="card_btn">Choisir ce CinéPass</button>
+    </article>
+
+    <!-- 3rd-->
+
+    <article class="card" data-category="gold">
+      <h3 class="card_title">CINÉPASS Gold</h3>
+      <ul class="card_title-list">
+         <li class="card_item">🎟️ Séances illimitées</li>
+  <li class="card_item">⭐ Accès aux films en avant-première</li>
+  <li class="card_item">🍿 Réductions sur les snacks</li>
+  <li class="card_item">🎧 Expérience 3D & Dolby incluse</li>
+  <li class="card_item">❌ Aucun engagement</li>
+      </ul>
+      <p class="card_price">19,40€</p>
+      <button class="card_btn">Choisir ce CinéPass</button>
+    </article>
+
+  </section>
+</div>
+    <!--cards-->
     
-  <section class="filtres">
+     <section class="filtre">
 				<h1>Filtres</h1>
 				<button class="btn-trier" aria-label="cliquer pour trier par prix croissant">Trier par prix croissant</button>
 				<br>
@@ -64,9 +126,6 @@
 				<button class="btn-nodesc" aria-label="cliquer pour Filtrer les pièces sans description">Filtrer les pièces sans description</button>
 			</section>
 <section class="fiches"> <h2>Programation</h2></section>
-    
-    <!--cards-->
-    
     
     
     

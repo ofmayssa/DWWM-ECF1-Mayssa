@@ -1,122 +1,72 @@
-// Récupération des pièces depuis le fichier JSON
-const reponse = await fetch('cinema.json');
-const films= await reponse.json();
+const response = await fetch('cinema.json');
+let films = await response.json();
 
-for (let i = 0; i < films.length; i++) {
+const sectionFiches = document.querySelector(".fiches");
 
-    const article = films[i];
-    // Récupération de l'élément du DOM qui accueillera les fiches
-    const sectionFiches = document.querySelector(".fiches");
-    // Création d’une balise dédiée à une pièce automobile
-    const filmElement = document.createElement("article");
-    // Création des balises 
-    const imageElement = document.createElement("img");
-    imageElement.src = article.image;
-    const movieElement = document.createElement("h2");
-    movieElement.innerText = article.movie;
-    const priceElement = document.createElement("p");
-    priceElement.innerText = `Prix: ${article.price} € `;
-    const descriptionElement = document.createElement("p");
-    descriptionElement.innerText = article.description ;
-    const ticketsSoldElement = document.createElement("p");
-    ticketsSoldElement.innerText =  `Tickets vendus: ${article.ticketsSold} ` ;
-    const dateElement = document.createElement("p");
-    dateElement.innerText =  `Date: ${article.date} ` ;
-    const timeElement = document.createElement("p");
-    timeElement.innerText =  `time: ${article.time} ` ;
-    const durationElement = document.createElement("p");
-    durationElement.innerText =  `time: ${article.duration} ` ;
+// Fonction pour afficher les films
+function renderFilms(filmsArray) {
+  sectionFiches.innerHTML = '<h2>Programation</h2>'; // reset + titre
 
-    sectionFiches.appendChild(filmElement);
-    filmElement.appendChild(movieElement);
-    filmElement.appendChild(dateElement);
-    filmElement.appendChild(durationElement);
-    filmElement.appendChild(timeElement);
-    filmElement.appendChild(imageElement);
-    filmElement.appendChild(descriptionElement);
-    filmElement.appendChild(ticketsSoldElement);
-    filmElement.appendChild(priceElement);
+  filmsArray.forEach(film => {
+    const card = document.createElement("article");
+    card.classList.add("card");
 
+    const title = document.createElement("h2");
+    title.innerText = film.movie;
 
- }
- 
- //gestion des boutons 
-const boutonTrier = document.querySelector(".btn-trier");
+    const image = document.createElement("img");
+    image.src = film.image;
+    image.alt = film.movie;
 
-boutonTrier.addEventListener("click", function () {
-    const filmsOrdonnees = Array.from(films);
-    filmsOrdonnees.sort(function (a, b) {
-        return a.price - b.price;
-     });
-     console.log(filmsOrdonnees);
-});
+    const desc = document.createElement("p");
+    desc.innerText = film.description;
 
-const boutonFiltrer = document.querySelector(".btn-filtrer");
+    const date = document.createElement("p");
+    date.innerText = `Date : ${film.date}`;
+    const time = document.createElement("p");
+    time.innerText = `Heure : ${film.time}`;
+    const duration = document.createElement("p");
+    duration.innerText = `Durée : ${film.duration} min`;
 
-boutonFiltrer.addEventListener("click", function () {
-    const filmsFiltrees = films.filter(function (film) {
-        return film.prix <= 35;
-    });
-   console.log(filmsFiltrees);
-});
+    const tickets = document.createElement("p");
+    tickets.innerText = `Tickets vendus : ${film.ticketsSold}`;
 
-//Correction Exercice
-const boutonDecroissant = document.querySelector(".btn-decroissant");
+    const progress = document.createElement("progress");
+    progress.value = film.ticketsSold;
+    progress.max = 100;
+    progress.classList.add("ticket-progress");
 
-boutonDecroissant.addEventListener("click", function () {
-    const filmsOrdonnees = Array.from(films);
-    filmsOrdonnees.sort(function (a, b) {
-        return b.price - a.price;
-     });
-     console.log(filmsOrdonnees);
-});
+    const price = document.createElement("p");
+    price.innerText = `Prix : ${film.price} €`;
 
-const boutonNoDescription = document.querySelector(".btn-nodesc");
-
-boutonNoDescription.addEventListener("click", function () {
-    const filmssFiltrees = films.filter(function (film) {
-        return film.description;
-    });
-   console.log(filmsFiltrees);
-});
-
-const noms = films.map(film => film.movie);
-for(let i = films.length -1 ; i >= 0; i--){
-    if(films[i].price > 35){
-        noms.splice(i,1);
-    }
-}
-console.log(noms)
-
-//Création de la liste
-const abordablesElements = document.createElement('ul');
-//Ajout de chaque nom à la liste
-for(let i=0; i < noms.length ; i++){
-    const movieElement = document.createElement('li');
-    movieElement.innerText = noms[i];
-    abordablesElements.appendChild(movieElement);
-}
-// Ajout de l'en-tête puis de la liste au bloc résultats filtres
-document.querySelector('.abordables')
-    .appendChild(abordablesElements)
-
-//Code Exercice 
-const nomsDisponibles = films.map(film => film.movie);
-const priceDisponibles = films.map(film => film.price);
-
-for(let i = films.length -1 ; i >= 0; i--){
-    if(films[i].disponibilite === false){
-        nomsDisponibles.splice(i,1);
-        priceDisponibles.splice(i,1);
-    }
+    card.append(title, image, desc, date, time, duration, tickets, progress, price);
+    sectionFiches.appendChild(card);
+  });
 }
 
-const disponiblesElement = document.createElement('ul');
+// Affichage initial
+renderFilms(films);
 
-for(let i=0 ; i < nomsDisponibles.length ; i++){
-    const movieElement = document.createElement('li');
-    movieElement.innerText = `${nomsDisponibles[i]} - ${priceDisponibles[i]} €`;
-    disponiblesElement.appendChild(movieElement);
-}
+// Tri prix croissant
+document.querySelector(".btn-trier").addEventListener("click", () => {
+  const sorted = [...films].sort((a, b) => a.price - b.price);
+  renderFilms(sorted);
+});
 
-document.querySelector('.disponibles').appendChild(disponiblesElement);
+// Tri prix décroissant
+document.querySelector(".btn-decroissant").addEventListener("click", () => {
+  const sorted = [...films].sort((a, b) => b.price - a.price);
+  renderFilms(sorted);
+});
+
+// Filtrer prix <= 35
+document.querySelector(".btn-filtrer").addEventListener("click", () => {
+  const filtered = films.filter(f => f.price <= 35);
+  renderFilms(filtered);
+});
+
+// Filtrer films sans description
+document.querySelector(".btn-nodesc").addEventListener("click", () => {
+  const filtered = films.filter(f => f.description);
+  renderFilms(filtered);
+});

@@ -63,7 +63,11 @@ body {
       justify-content: center;
       align-items: center;
       padding: 15px;
+<<<<<<< HEAD
       row-gap: 10px;           
+=======
+      row-gap: 10px;            
+>>>>>>> fa39889 (jeudi)
     }
   
 
@@ -73,7 +77,11 @@ body {
       width: 110px;   
 
       @media (max-width: 650px) {
+<<<<<<< HEAD
         max-width: 80px;       
+=======
+        max-width: 80px;      
+>>>>>>> fa39889 (jeudi)
         height: auto;
       }
     }
@@ -140,7 +148,7 @@ body {
 .container{
   background-color: #E8FFFF !important;
 
-&-titles{
+&_titles{
   padding-bottom: 4vh;
   display: flex;
   flex-direction: column;
@@ -150,13 +158,13 @@ body {
   background-position: center;
 
 
-  &_one{
+  &-one{
       font-family: 'Roboto', sans-serif;
       color: #FD55B7;
 
   }
 
-  &_two{
+  &-two{
       font-family: 'Exo 2', sans-serif;
       color: #2e2a39;
   }
@@ -212,11 +220,12 @@ input[type=submit]:hover {
 
 
 /* Create two columns that float next to eachother */
-.row-column {
+.row_column {
   float: left;
   width: 50%;
   margin-top: 6px;
   padding: 75px;
+  font-family: "Exo 2";
 
 }
 
@@ -229,7 +238,7 @@ input[type=submit]:hover {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .row-column, 
+  .row_column, 
   input[type=submit], 
   select, 
   textarea, 
