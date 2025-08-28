@@ -1,0 +1,7 @@
+READ ME
+cinema Neon Dynasty - Website
+Cinema Neon Dynasty is a website dedicated to cinema with a focus on films featuring special effects (SFX). The site includes a homepage, a contact page, and a page listing the movies currently showing along with ticket availability. Users can navigate easily between pages using clickable links, explore films at the cinema, and check or reserve tickets.
+To collaborate on this project using Git, first clone the repository by running git clone <REPOSITORY_URL> in your terminal, replacing <REPOSITORY_URL> with the actual GitHub link. Once cloned, navigate into the project folder with cd folder-name and open the index.html file in your browser to view the site locally.
+When making changes, it is recommended to create a new branch using git checkout -b branch-name and then work on your updates. After finishing your edits, stage the changes with git add . and commit them using git commit -m "Description of your changes". You can then push your branch to GitHub with git push origin branch-name and open a Pull Request to propose merging your updates into the main branch.
+Contributors should follow the existing file structure and naming conventions, test their changes locally before pushing, and use clear, descriptive commit messages.
+
