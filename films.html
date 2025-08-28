@@ -57,7 +57,7 @@
 
 <div class="cinepass"> 
 
-  <h1 class="cinepass_title">CinéPass</h1>
+  <h2 class="cinepass_title">CinéPass</h2>
   
   <main class="filters">
   <button class="filters_btn" data-filter="all">Tous</button>
@@ -69,7 +69,7 @@
   <section class="cinepass_section">
     <!-- 1rst -->
     <article class="card" data-category="basic">
-      <h3 class="card_title">CINÉPASS -18</h3>
+      <p class="card_title">CINÉPASS -18</p>
       <ul class="card_title-list">
        <li class="card_item">🎟️ Séances illimitées</li>
   <li class="card_item">⭐ Accès aux films en avant-première</li>
@@ -84,7 +84,7 @@
     <!-- 2nd -->
 
     <article class="card" data-category="plus">
-      <h3 class="card_title">CINÉPASS +18</h3>
+      <p class="card_title">CINÉPASS +18</p>
       <ul class="card_title-list">
         <li class="card_item">🎟️ Séances illimitées</li>
   <li class="card_item">⭐ Accès aux films en avant-première</li>
@@ -99,7 +99,7 @@
     <!-- 3rd-->
 
     <article class="card" data-category="gold">
-      <h3 class="card_title">CINÉPASS Gold</h3>
+      <p class="card_title">CINÉPASS Gold</p>
       <ul class="card_title-list">
          <li class="card_item">🎟️ Séances illimitées</li>
   <li class="card_item">⭐ Accès aux films en avant-première</li>
@@ -116,16 +116,21 @@
     <!--cards-->
     
      <section class="filtre">
-				<h1>Filtres</h1>
-				<button class="btn-trier" aria-label="cliquer pour trier par prix croissant">Trier par prix croissant</button>
-				<br>
-				<button class="btn-filtrer" aria-label="cliquer pour Filtrer les pièces non abordables">Filtrer les pièces non abordables</button>
-				<br>
-				<button class="btn-decroissant"  aria-label="cliquer pour Trier par prix décroissant">Trier par prix décroissant</button>
-				<br>
-				<button class="btn-nodesc" aria-label="cliquer pour Filtrer les pièces sans description">Filtrer les pièces sans description</button>
-			</section>
-<section class="fiches"> <h2>Programation</h2></section>
+  <h3 id="filter_title">Filtres</h3>
+  <button class="btn-trier" aria-label="Trier les films par prix croissant">Trier par prix croissant</button>
+  <br>
+  <button class="btn-filtrer" aria-label="Afficher seulement les films abordables (prix inférieur ou égal à 35€)">Filtrer les pièces non abordables</button>
+  <br>
+  <button class="btn-decroissant" aria-label="Trier les films par prix décroissant">Trier par prix décroissant</button>
+  <br>
+  <button class="btn-nodesc" aria-label="Afficher seulement les films ayant une description">Filtrer les pièces sans description</button>
+</section>
+
+<section class="fiches" aria-labelledby="filter-title">
+  <p>Programation<p>
+</section>
+
+
     
     
     
@@ -134,28 +139,32 @@
 
 
 
-    <footer>
-<div class="footer">
+   <footer>
+  <div class="footer">
 
-          <div class="footer_icon">
-              <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer"> <img src="img/FbIcon.png" alt="Facebook icon"></a>
-              <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer"><img src="img/IgIcon.png" alt="Instagram icon"></a>
-              <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer"><img src="img/MailIcon.png" alt="Mail icon"></a>
-            </div>
+    <div class="footer_icon" aria-label="Réseaux sociaux">
+      <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+        <img src="img/FbIcon.png" alt="Icône Facebook">
+      </a>
+      <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer">
+        <img src="img/IgIcon.png" alt="Icône Instagram">
+      </a>
+      <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer">
+        <img src="img/MailIcon.png" alt="Icône Email">
+      </a>
+    </div>
       
-   
-       <div class="footer_icon-adress"> <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
-  Adresse :<address> 55 rue du Faubourg-Saint-Honoré 75008</address>
-</a>
-</div>
+    <div class="footer_icon-adress">
+      <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
+        <span aria-label="Adresse du cinéma">Adresse :</span>
+        <address>55 rue du Faubourg-Saint-Honoré, 75008 Paris</address>
+      </a>
+    </div>
 
-        
-        <p> Horaires :</p>
-<p>Lundi – Samedi : 10h00 – 00h00</p>
-
-
-
-</div>
+    <p>Horaires :</p>
+    <p>Lundi – Samedi : 10h00 – 00h00</p>
+  </div>
 </footer>
+
 </body>
 </html>

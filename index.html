@@ -15,28 +15,28 @@
     <!--start of the first page-->
 
   <header class="header">
-
-    <div class="header__content">
+  <div class="header__content">
      
-     <a href="#"> <img class="logo"  src="img/logo.png" aria-label=""  le logo du site alt="logo du site">
-      </a>
+    
+    <a href="#">
+      <img class="logo" src="img/logo.png" alt="Logo du site CINEMA NEON DYNASTY">
+    </a>
   
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__list-link" href="films.html">Films</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__list-link" href="contact.html"> Contact</a>
-          </li>
-          <li class="nav__item">
-            <a class="btn" href="films.html">Prenez votre place!</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-  </header>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__list-link" href="films.html">Films</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__list-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a class="btn" href="films.html">Prenez votre place !</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
  
   <main>
@@ -45,11 +45,12 @@
     </div>
 
 <!--equalizer-->
+<!-- Player + bouton -->
 <div class="player-control"> 
-  <button id="js-play-btn" aria-label="boutton pour mettre play et pause" > Musique</button>
-
-<audio src="img/Loop.mp3" id="js-audio"></audio>
+  <button id="js-play-btn" aria-label="Activer ou mettre en pause la musique">🎵 Musique</button>
+  <audio src="img/Loop.mp3" id="js-audio"></audio>
 </div>
+
 
 
 <div>
@@ -131,29 +132,33 @@
 
 
 
- <footer>
-<div class="footer">
+<footer>
+  <div class="footer">
 
-          <div class="footer_icon">
-              <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer"> <img src="img/FbIcon.png" alt="Facebook icon"></a>
-              <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer"><img src="img/IgIcon.png" alt="Instagram icon"></a>
-              <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer"><img src="img/MailIcon.png" alt="Mail icon"></a>
-            </div>
+    <div class="footer_icon" aria-label="Réseaux sociaux">
+      <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+        <img src="img/FbIcon.png" alt="Icône Facebook">
+      </a>
+      <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer">
+        <img src="img/IgIcon.png" alt="Icône Instagram">
+      </a>
+      <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer">
+        <img src="img/MailIcon.png" alt="Icône Email">
+      </a>
+    </div>
       
-   
-       <div class="footer_icon-adress"> <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
-  Adresse :<address> 55 rue du Faubourg-Saint-Honoré 75008</address>
-</a>
-</div>
+    <div class="footer_icon-adress">
+      <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
+        <span aria-label="Adresse du cinéma">Adresse :</span>
+        <address>55 rue du Faubourg-Saint-Honoré, 75008 Paris</address>
+      </a>
+    </div>
 
-        
-        <p> Horaires : </p>
-<p>Lundi – Samedi : 10h00 – 00h00</p>
-    
-
-
-</div>
+    <p>Horaires :</p>
+    <p>Lundi – Samedi : 10h00 – 00h00</p>
+  </div>
 </footer>
+
 
 
   

@@ -3,129 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/contact.min.css">
     <link rel="icon" type="image/png" href="img/favicon.ico">
-    <title>Nous contacter</title>
-
+    <title>Contact us</title>
 </head>
 <body>
    
-     <header class="header">
-
+  <!-- HEADER -->
+  <header class="header">
     <div class="header__content">
-     
-     <a href="index.html"> <img class="logo"  src="img/logo.png" aria-label="le logo de site cinéma" alt="logo du site">
+      <!-- Clickable logo -->
+      <a href="index.html">
+        <img class="logo" src="img/logo.png" alt="Logo of CINEMA NEON DYNASTY">
       </a>
-  
-      <nav class="nav">
+
+      <!-- Main navigation -->
+      <nav class="nav" aria-label="Main navigation">
         <ul class="nav__list">
-          <li class="nav__list-item">
-            <a class="nav__list-link" href="films.html">Films</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__list-link" href="contact.html"> Contact</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="btn" href="films.html">Prenez votre place!</a>
-          </li>
+          <li class="nav__list-item"><a class="nav__list-link" href="films.html">Films</a></li>
+          <li class="nav__item"><a class="nav__list-link" href="contact.html">Contact</a></li>
+          <li class="nav__list-item"><a class="btn" href="films.html">Get your ticket!</a></li>
         </ul>
       </nav>
     </div>
-
   </header>
   
-  
+  <!--  MAIN CONTENT-->
+  <main>
+    <div class="container">
 
-   <main>
+      <!-- Page titles -->
+      <div class="container_titles">
+        <div class="container_titles-one"><h1>CONTACT</h1></div>
+        <br>
+        <div class="container_titles-two"><h2>Nous vous écoutons</h2></div>
+      </div>
 
-   <div class="container">
+      <!-- Two-column layout -->
+      <div class="row">
+        <div class="row-column">
 
-  <div class="container_titles" >
+          <!-- Illustration image -->
+          <div class="row_column">
+            <img src="img/affiche.png" style="width:100%" alt="Main cinema poster, Japanese style">
+          </div>
 
-   <div class="container_titles-one"> <h1>CONTACT</h1></div>
-    <br>
-    <div class="container_titles-two"><h2>Nous vous écoutons:</h2></div>
+          <!-- Contact form -->
+          <div class="row_column">
+            <form action="/action_page.php">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="prenom" placeholder="Your first name..">
 
-  </div>
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="nom" placeholder="Your last name..">
 
-  <div class="row">
-<<<<<<< HEAD
-    <div class="row-column">
-=======
-    <div class="row_column">
->>>>>>> fa39889 (jeudi)
-      <img src="img/affiche.png" style="width:100%"  aria-label="l'affiche du cinema japonisante"alt="affiche principal du cinéma">
+              <label for="country">Country</label>
+              <select id="country" name="pays">
+                <!-- Country dropdown list -->
+                <option value="fr">France</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="de">Germany</option>
+                <option value="es">Spain</option>
+                <option value="it">Italy</option>
+                <option value="jp">Japan</option>
+                <option value="cn">China</option>
+                <option value="br">Brazil</option>
+                <option value="au">Australia</option>
+                <option value="in">India</option>
+                <option value="mx">Mexico</option>
+                <option value="za">South Africa</option>
+                <option value="usa">USA</option>
+              </select>
+
+              <label for="subject">Your request</label>
+              <textarea id="subject" name="subject" placeholder="Write your request" style="height:170px"></textarea>
+
+              <!-- Submit button -->
+              <input type="submit" value="Submit" aria-label="Send contact form">
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row_column">
-      <form action="/action_page.php">
-        <label for="fname">Prénom</label>
-        <input type="text" id="fname" name="prenom" placeholder="Votre prénom..">
-        <label for="lname">Nom</label>
-        <input type="text" id="lname" name="Nom" placeholder="Votre nom de famille..">
-        <label for="country">Pays</label>
-        <select id="country" name="pays">
-
-          <option value="fr">France</option>
-          <option value="ca">Canada</option>
-          <option value="uk">Royaume-Uni</option>
-          <option value="de">Allemagne</option>
-          <option value="es">Espagne</option>
-          <option value="it">Italie</option>
-          <option value="jp">Japon</option>
-          <option value="cn">Chine</option>
-          <option value="br">Brésil</option>
-          <option value="au">Australie</option>
-          <option value="in">Inde</option>
-          <option value="mx">Mexique</option>
-          <option value="za">Afrique du Sud</option>
-          <option value="usa">USA</option>
-
-        </select>
-        <label for="subject">Votre demande</label>
-        <textarea id="subject" name="subject" placeholder="Ecrivez votre demande" style="height:170px"></textarea>
-        <input type="submit" value="Soummetre">
-      </form>
-    </div>
-  </div>
-</div>
-   </main>
+  </main>
    
-   
-
-
-
-
-
-
-
-
-
-
-
-   
+  <!-- FOOTER  -->
   <footer>
-<div class="footer">
-
-          <div class="footer_icon">
-              <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer"> <img src="img/FbIcon.png" alt="Facebook icon"></a>
-              <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer"><img src="img/IgIcon.png" alt="Instagram icon"></a>
-              <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer"><img src="img/MailIcon.png" alt="Mail icon"></a>
-            </div>
+    <div class="footer">
+      <!-- Social media icons -->
+      <div class="footer_icon" aria-label="Social media">
+        <a href="https://www.facebook.com/kinotayo.festival/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+          <img src="img/FbIcon.png" alt="Facebook icon">
+        </a>
+        <a href="https://www.instagram.com/kinotayo.festival/" target="_blank" rel="noopener noreferrer">
+          <img src="img/IgIcon.png" alt="Instagram icon">
+        </a>
+        <a href="https://workspace.google.com/intl/fr/gmail/" target="_blank" rel="noopener noreferrer">
+          <img src="img/MailIcon.png" alt="Email icon">
+        </a>
+      </div>
       
-   
-       <div class="footer_icon-adress"> <a class="maps_link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
-  Adresse :<address> 55 rue du Faubourg-Saint-Honoré 75008</address>
-</a>
-</div>
+      <!-- Cinema address -->
+      <div class="footer_icon-adress">
+        <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=55+Rue+du+Faubourg-Saint-Honoré,+75008+Paris" target="_blank">
+          <span aria-label="Cinema address">Address:</span>
+          <address>55 rue du Faubourg-Saint-Honoré, 75008 Paris</address>
+        </a>
+      </div>
 
-        
-        <p> Horaires :</p>
-<p>Lundi – Samedi : 10h00 – 00h00</p>
-
-
-
-</div>
-</footer>
+      <!-- Opening hours -->
+      <p>Opening hours:</p>
+      <p>Monday – Saturday: 10:00 – 00:00</p>
+    </div>
+  </footer>
 
 </body>
 </html>
