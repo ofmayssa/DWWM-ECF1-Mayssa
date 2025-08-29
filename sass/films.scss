@@ -82,7 +82,7 @@ body {
   height: 15vh;
   z-index: 1000; 
   @media (max-width: 650px) {
-    height: 18vh;
+    height: 25vh;
   }
 
   &__content {
@@ -168,7 +168,9 @@ body {
 
   @media (max-width: 650px) {
     grid-template-columns: repeat(2, 1fr);
-    width: 600px;
+    width: 470px;
+    display: flex;
+    flex-direction:unset
   }
 }
 
