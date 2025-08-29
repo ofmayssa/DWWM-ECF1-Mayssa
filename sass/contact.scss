@@ -200,43 +200,42 @@ input[type=submit] {
 }
 
 /* Two-column layout with Flexbox */
+/* Create two columns with Flexbox */
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
+  gap: 20px; /* espace entre colonnes */
 }
 
 .row_column {
-  flex: 1; 
-  min-width: 280px; 
-  padding: 20px;
-  font-family: "Exo 2";
+  flex: 1 1 50%;
+  margin-top: 6px;
+  padding: 40px;
+  font-family: "Exo 2", sans-serif;
 }
 
 /* Responsive layout */
 @media screen and (max-width: 600px) {
   .row {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .row_column {
+    flex: 1 1 100%;
     width: 100%;
-    padding: 0; 
+    margin-top: 0;
+    padding: 20px;
   }
 
-  input[type=text], 
+  input[type=submit], 
   select, 
-  textarea {
-    width: 95%;   
-    margin: 0 auto; 
-  }
-
-  input[type=submit] {
-    width: auto; 
-    margin: 10px auto;
-    display: block;
+  textarea, 
+  input[type=text] {
+    width: 100%;
+    margin-top: 0;
   }
 }
+
 /* Two-column layout */
 .row_column {
   float: left;
