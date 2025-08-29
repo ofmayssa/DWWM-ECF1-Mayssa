@@ -167,10 +167,8 @@ body {
   }
 
   @media (max-width: 650px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 470px;
-    display: flex;
-    flex-direction:unset
   }
 }
 
