@@ -188,37 +188,40 @@ input[type=submit] {
 
 @media screen and (max-width: 600px) {
   .container {
-    padding: 100px;
+    padding: 30px;
     padding-bottom: 25vh;
     padding-top: 20vh;
   }
 }
 
-/* Create two columns */
-.row_column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 75px;
-  font-family: "Exo 2";
+/* NEW FLEXBOX LAYOUT FOR CONTACT */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.row_column {
+  flex: 1 1 45%;
+  font-family: "Exo 2", sans-serif;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 }
 
 /* Responsive layout */
-@media screen and (max-width: 600px) {
-  .row_column, 
-  input[type=submit], 
-  select, 
-  textarea, 
-  input[type=text] {
-    width: 100%;      
-    margin-top: 0;
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row_column {
+    flex: 1 1 100%;
+    padding: 0;
   }
 }
 
